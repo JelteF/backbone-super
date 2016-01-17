@@ -30,7 +30,7 @@
 	};
 	var unImplementedSuper = function(method){throw "Super does not implement this method: " + method;};
 
-  var fnTest = /\b_super\b/;
+  var fnTest = /((?!\/\/).)*?\b_super\b/m;
 
   var makeWrapper = function(parentProto, name, fn) {
     var wrapper = function() {
